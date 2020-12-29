@@ -1,0 +1,27 @@
+gin-and-tonic: &gin-and-tonic
+  name: G & T
+  type: cocktail
+  categories:
+    - gin
+    - classic
+  ingredients:
+    - name: Gin
+      amount: 2
+      unit: oz
+      notes: London dry designated gins are generally recommended.
+    - name: Tonic water
+      amount: 2--6
+      unit: oz
+      notes: Fever tree is a good brand.
+    - name: Lemon peel
+      processing: twist
+    - name: Ice
+      processing: small cubes
+  method:
+    - step: Fill a high ball glass with ice cubes.
+    - step: Measure 2 oz gin into the glass.
+    - step: Pour tonic into the glass over a bar spoon to preserve effervescense.
+    - step: Garnish with a lemon twist.
+  notes: |
+    Gin and tonic, unsurprisingly, are what make this drink.
+    The best G & T is made with good gin, and good tonic.

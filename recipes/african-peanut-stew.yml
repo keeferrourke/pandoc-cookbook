@@ -1,0 +1,107 @@
+african-peanut-stew: &african-peanut-stew
+  name: Vegan African Peanut Stew
+  type: soup
+  categories:
+    - stew
+    - vegan
+  source:
+    other: Adapted from All Recipes.
+    url: https://www.allrecipes.com/recipe/265584/vegan-african-peanut-stew-in-the-instant-pot/
+  yields:
+    amount: 4
+    unit: servings
+  times:
+    - name: Preparation
+      mm: 30
+    - name: Cook
+      hh: 2
+  cookware:
+    - Large pot
+    - Small bowl
+  ingredients:
+    - name: Cumin
+      amount: 1 \sfrac{1}{2}
+      unit: tsp.
+      processing: ground
+    - name: Cinnamon
+      amount: \sfrac{1}{2}
+      unit: tsp.
+      processing: ground
+    - name: Cloves
+      amount: \sfrac{1}{8}
+      unit: tsp.
+      processing: ground
+    - name: Cayenne pepper
+      amount: \sfrac{1}{4}
+      unit: tsp.
+      processing: ground
+    - name: Salt
+      amount: 1
+      unit: tsp.
+    - name: Dried red chili flakes
+      amount: 1
+      unit: tsp.
+    - name: Sweet potato
+      amount: 2
+      unit: ea.
+      processing: medium, cut to 1.5cm cubes
+    - name: Yellow onion
+      amount: 1
+      unit: cup
+      processing: diced
+    - name: Red bell pepper
+      amount: \sfrac{1}{2}
+      unit: cup
+      processing: diced
+    - name: Garlic
+      amount: 4
+      unit: clove
+      processing: minced
+    - name: Ginger root
+      amount: one
+      unit: 9 cm piece
+      processing: peeled and minced
+    - name: Crushed tomatoes
+      amount: one
+      unit: 28 oz can
+    - name: Peanut butter
+      amount: \sfrac{1}{2}
+      unit: cup
+    - name: Collard greens
+      amount: 3
+      unit: cup
+      processing: chopped
+    - name: Cilantro
+      amount: to taste
+      processing: chopped
+    - name: Peanuts
+      amount: to taste
+      processing: chopped
+    - name: Olive oil
+      amount: 1
+      unit: tbsp.
+    - name: Water
+      amount: 2
+      unit: cups
+  method:
+    - step: >
+        Mix cumin, cinnamon, cayenne, chili flakes, cloves, and salt together in a bowl.
+        Set spice mixture aside.
+    - step: Heat pot to medium heat, and add olive oil.
+    - step: >
+        Once oil is hot, add sweet potato, onion, and bell pepper.
+        Cook, stirring occassionally, for 3 minutes.
+        Add a splash of water and stir if vegetables stick to the pot.
+    - step: >
+        Add garlic, ginger, and spice mixture to the pot.
+        Cook and stir continually for one minute, or until aromatic.
+    - step: >
+        Add tomatoes and peanut butter.
+        Stir until peanut butter is dissolved.
+    - step: Place the lid on the pot, and allow to simmer for about 2 hours.
+    - step: Serve into bowls, and top with cilantro and chopped peanuts.
+
+  notes: |
+    I would probably make this spicier, but the recipe went over well with friends and we really enjoyed it.
+
+

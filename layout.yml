@@ -1,0 +1,24 @@
+# This file *must not* begin with a document delimiter!
+
+# A chapter currently consists of a name and a recipe list.
+# It may be extended later to allow some forward text, but I have an
+# agenda against recipes which are also novels :)
+
+chapters:
+ - name: Food
+   recipes:
+     - *african-peanut-stew
+     - *okonomiyaki
+ - name: Drinks
+   recipes:
+     # You might not want an hrule at the end of some recipes.
+     # For example, the first short recipe of a chapter.
+     # Disable the hrule by merging the recipe in with the nohrule field.
+     - <<: *manhattan
+       nohrule: true
+     # Or just include the recipe and let the global template styling do its thing.
+     - *toronto
+     - *gin-and-tonic
+     - *tom-collins
+# This document terminator is required!
+...

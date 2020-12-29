@@ -1,0 +1,124 @@
+okonomiyaki: &okonomiyaki
+  name: Osaka-style Okonomiyaki
+  type: main
+  categories:
+    - Japanese
+  yields:
+    amount: 4
+    unit: servings
+  times:
+    - name: Preparation
+      mm: 15
+    - name: Cook
+      mm: 15
+  cookware:
+    - Large bowl
+    - Frying pan
+  ingredients:
+    - name: Okonomiyaki sauce
+      amount: 60
+      unit: mL
+      notes: >
+        A quick sauce can be prepared easily with 1 part soy sauce, 1 part honey, 4 parts ketchup or sriracha, and 3 parts Worcestershire sauce.
+        For the gluten intolerant, ensure you are using proper _tamari_ soy sauce.
+      substitutions:
+        list:
+          - name: Barbecue sauce
+    - name: Japanese mayonnaise
+      amount: 60
+      unit: mL
+    - name: Egg
+      amount: 2
+      unit: ea.
+      substitutions:
+        list:
+          - name: Flax seed
+            processing: ground
+            amount: 1
+            unit: tbsp
+            notes: >
+              Continually mix with a very small amount of water in a bowl until a consistency similar to egg whites is achieved.
+              Add more water if the mixture is too dry.
+    - name: Flour
+      amount: 1
+      unit: cup
+      substitutions:
+        list:
+          - name: Rice flour
+    - name: Water
+      amount: 1 \sfrac{1}{2}
+      unit: cup
+      substitutions:
+        list:
+          - name: Dashi
+            notes: >
+              For more flavour, use a _dashi_ instead of water.
+              This will require more prep time, as a dashi is made by soaking shiitake musrooms and/or konbu (kelp) with warm water for approx. 4 hours.
+    - name: Green Cabbage
+      amount: \sfrac{1}{4}
+      unit: ea.
+      notes: >
+        Green, nappa, or savoy cabbage is fine.
+        Do **not** attempt to substitute with red cabbage---the result is unsightly.
+    - name: White or Spanish Onion
+      amount: \sfrac{1}{2}
+      unit: ea.
+    - name: Carrot
+      amount: 1
+      unit: ea.
+      processing: shredded
+      notes: Optional; other add-ins can be used in place of or in addition to carrot.
+    - name: Green onion
+      amount: 2
+      unit: ea.
+    - name: Chili flakes
+      amount: \sfrac{1}{2}
+      unit: tbsp
+    - name: Cracked pepper
+      amoutn: \sfrac{1}{2}
+      unit: tsp.
+    - name: Sea salt
+      amount: \sfrac{1}{4}
+      unit: tsp.
+    - name: Oil
+      amount: 1
+      unit: tbsp.
+    - name: Bonito flakes
+      notes: Optional; also called _katsuoboshi_.
+      processing: for garnish
+
+  prep:
+    - step: >
+        In a large bowl, combine flour, eggs, and water.
+        Whisk until a smooth, thin batter has formed.
+        Mix in chilli flakes, pepper, and sea salt, then set aside.
+    - step: Finely chop cabbage add it to batter.
+      notes: For a more uniform texture, consider grating the cabbage.
+    - step: >
+        Finely chop the green onions.
+        Add the white/light green portions of the onion to the batter, and set aside the prettier dark green portions.
+    - step: Finely chop the half onion and add it to the batter.
+    - step: Fold the batter over itself using a spatula (or mix with your hands) until the cabbage and other add-ins are evenly coated.
+      notes: The batter can hold in the fridge for a couple days, but may separate and require re-mixing.
+
+  method:
+    - step: A small non-stick frying pan, toast black seasame seeds on low heat for 2--5 minutes, then set aside.
+    - step: Add oil to the pan and turn the temperature up to medium heat.
+    - step: >
+        Slowly add the battered cabbage mixture to the pan.
+        Using a silicon spatula, pat down the mixture and clean up the sides to form a pancake.
+    - step: Cook for approximately 5--10 minutes on each side, then transfer to a cutting board.
+    - step: >
+        Smother the okonomiyaki with the sauce, and pipe Japanese mayonnaise onto the pancake in a chevron (back-and-forth) pattern.
+        Use a chopstick or butter knife to draw parallel lines through the sauces to create a nice visual effect.
+        Top the okonomiyaki with the set-aside green onions, and sesame seeds.
+        Optinally add bonito for a fun and fishy topping that _dances_ atop the sauces.
+  notes: |
+    In Japanese, _okonomi_ means "your choice" while _yaki_ means "fried".
+    While not strictly necessary, this is usually a cabbage pancake.
+    Okonomiyaki is a popular street food in Osaka and can be prepared with a variety of ingredients and toppings.
+    In Hiroshima, okonomiyaki are made by layering ingredients rather than mixing them directly into the batter.
+
+    This recipe is vegetarian, but can be made vegan.
+    For meat-lovers, it is tasty on top of a weave of bacon or slices of pork belly.
+

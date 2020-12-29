@@ -1,0 +1,54 @@
+# This file *must* begin with a document delimiter!
+---
+# The title of this book.
+title: Pandoc Cookbook
+# An optional subtitle.
+subtitle: YAML recipes for all!
+# Setting title-page to false will produce a tufte-handout style document.
+title-page: true
+# The author list.
+author:
+  - first: Keefer
+    last: Rourke
+# Set to true if you want copyright information to be included in the book
+# front matter.
+# Copyright information consists of the edition, publisher and license.
+# All copyright-related fields are optional, and if omitted with not be included.
+copyright: true
+edition: draft edition
+publisher:
+  name: Self-publishing co.
+  location: Anywhere, Earth, Milky Way Galaxy
+license: >
+  This work is licensed under the \href{https://creativecommons.org/licenses/by-nc-sa/3.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License}.
+  This work may be freely modified and redistributed with appropriate attribution for non-commercial purposes.
+
+# Include a table contents?
+toc: true
+# Include a list of tables?
+lot: false
+# Include a list of figures?
+lof: false
+
+# You can include a list of inspiring quotations at the beginning of the book
+# if you like.
+epigraph:
+  - quote: >
+      The most damaging phrase in the language is: "It's always been done that way."
+    author: Grace Hopper
+# You can also include an optional dedication text.
+dedication: >
+  This example book is dedicated to folks who appreciate beautiful typesetting but
+  hate writing extensive amounts of \LaTeX.
+
+# If you plan to print the book, setting colorlinks to false is a good idea.
+colorlinks: true
+
+# If true, a new page will be started between each recipe.
+break-between-entries: true
+# If true, a horizontal rule will be printed at the end of each recipe.
+# This can be overridden on a per-recipe basis by setting the nohrule: true
+# property on a recipe list item.
+rule-between-entries: true
+
+# This file *must not* end with a document delimiter or terminator!

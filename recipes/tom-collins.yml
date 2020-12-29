@@ -1,0 +1,45 @@
+tom-collins: &tom-collins
+  name: Tom Collins
+  type: cocktail
+  source:
+    other: Jerry Thomas, 1876
+  categories:
+    - gin
+    - classic
+  yields:
+    amount: 1
+    unit: drink
+  ingredients:
+    - name: Old Tom Gin
+      amount: 2
+      unit: oz
+      notes: Old Tom Gin is sweeter than London Dry, but dryer than Genever gin.
+      substitutions:
+        list:
+          - name: London Dry Gin
+            notes: >
+              Historically, Old Tom gin is used, though London Dry may be easier to come by and is also very nice.
+    - name: Lemon juice
+      amount: 1
+      unit: oz
+      notes: Fresh is best.
+    - name: Simple syrup
+      amount: \sfrac{1}{2}
+      unit: oz
+    - name: Sparkling water
+      amount: 2--4
+      unit: oz
+      substitutions:
+        list:
+          - name: Club soda
+    - name: Ice
+      processing: medium cubes
+  method:
+    - step: Add ice to a highball glass.
+    - step: Combine gin, lemon juice, and simple syrup in the glass and stir.
+    - step: Pour sparkling water over a bar spoon to preserve effervescence.
+  notes: |
+    Quite simply, gin and sparkling lemonade.
+
+    This drink's name may come from the use of Old Tom, and serving in a Collins glass (highball).
+    The true origins of the name are neglected by history though.

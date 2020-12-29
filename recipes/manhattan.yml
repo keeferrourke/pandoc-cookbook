@@ -1,0 +1,45 @@
+manhattan: &manhattan
+  name: Dry Manhattan
+  type: cocktail
+  categories:
+    - whisky
+    - classic
+    - dry
+  yields:
+    amount: 1
+    unit: drink
+  ingredients:
+    - name: Rye whisky
+      amount: 2
+      unit: oz
+    - name: Dry vermouth
+      amount: 1
+      unit: oz
+    - name: Angostura bitters
+      amount: 2
+      unit: dash
+    - name: Maraschino cherry
+      amount: 1
+      unit: ea.
+    - name: Orange peel
+      processing: twist
+      notes: Optional.
+    - name: Ice
+      processing: cracked; large cubes
+  method:
+    - step: In a cocktail shaker combine rye and vermouth.
+      notes: >
+        If using a whisky tumbler, this drink can be made directly in the glass.
+        Add large ice cubes first, then measure rye and vermouth into the tumbler and stir.
+    - step: Stir quickly with cracked ice.
+    - step: Strain into a chilled coup or whisky tumbler filled with large ice cubes.
+    - step: Garnish with a maraschino cherry and/or orange peel twist.
+  notes: |
+    This cocktail is batch-friendly, and will hold without refridgeration.
+    Great to gift, or just to have on hand for an easy drink.
+
+    The use of rye in this Manhattan results in a drier, spicier cocktail, complimented very well by dry vermouth.
+
+    Traditional Manhattan cocktails call for sweet vermouth, and may substitute rye for bourbon to make a sweeter, mellower drink.
+
+

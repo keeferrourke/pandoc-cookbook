@@ -1,0 +1,376 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tufte-Style Book (Minimal Template)
+% LaTeX Template
+% Version 1.0 (5/1/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% IMPORTANT NOTE:
+% In addition to running BibTeX to compile the reference list from the .bib
+% file, you will need to run MakeIndex to compile the index at the end of the
+% document.
+%
+% Adapted to suite compiling YAML recipes to Pandoc by Keefer Rourke (12/2020)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[$if(title-page)$$else$notitlepage$endif$,oneside,marginals=justified]{tufte-book}
+
+% Configure packages.
+
+$if(colorlinks)$
+\hypersetup{colorlinks}
+$endif$
+
+\usepackage{longtable}
+\usepackage{xfrac} % Allows slanted fractions
+\usepackage{microtype} % Improves character and word spacing
+\usepackage{booktabs} % Better horizontal rules in tables
+\usepackage{xspace} % Used for printing a trailing space better than using a tilde (~) using the \xspace command
+\usepackage{graphicx} % Needed to insert images into the document
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio} % Improves figure scaling
+
+\usepackage{fancyvrb} % Allows customization of verbatim environments
+\fvset{fontsize=\normalsize} % The font size of all verbatim text can be changed here
+
+% Define a subtitle.
+
+\makeatletter
+\newcommand{\plainsubtitle}{}% Plain-text-only subtitle
+\newcommand{\subtitle}[1]{%
+  \gdef\@subtitle{#1}%
+  \renewcommand{\plainsubtitle}{#1}% Use provided plain-text title
+  \ifthenelse{\isundefined{\hypersetup}}%
+    {}% hyperref is not loaded; do nothing.
+    {\hypersetup{pdftitle={\plaintitle: \plainsubtitle{}}}} % Set the PDF metadata title.
+}
+\renewcommand{\maketitlepage}[0]{%
+  \cleardoublepage%
+  {%
+  \sffamily%
+  \begin{fullwidth}%
+  \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklessauthor}}%
+  \vspace{11.5pc}%
+  \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklesstitle}}%
+  \vspace{5pc}%
+  \fontsize{24}{28}\selectfont\par\noindent\textcolor{darkgray}{\smallcaps{\plainsubtitle}}%
+  \vfill%
+  \fontsize{14}{16}\selectfont\par\noindent\allcaps{\thanklesspublisher}%
+  \end{fullwidth}%
+  }
+  \thispagestyle{empty}%
+  \clearpage%
+}
+\makeatother
+
+% Define a command for the epigraph quotes.
+
+\newcommand{\openepigraph}[2]{%
+\begin{fullwidth}
+\sffamily\large
+\begin{doublespace}
+\noindent\allcaps{#1}\\ % The quote
+\noindent\allcaps{#2} % The author
+\end{doublespace}
+\end{fullwidth}
+}
+
+
+\newcommand{\hangp}[1]{\makebox[0pt][r]{(}#1\makebox[0pt][l]{)}} % New command to create parentheses around text in tables which take up no horizontal space - this improves column spacing
+\newcommand{\hangstar}{\makebox[0pt][l]{*}} % New command to create asterisks in tables which take up no horizontal space - this improves column spacing
+
+\newcommand{\monthyear}{\ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi\space\number\year}
+
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage} % Command to insert a blank page
+
+%----------------------------------------------------------------------------------------
+%	INDEXING
+%----------------------------------------------------------------------------------------
+
+\usepackage{makeidx} % Used to generate the index
+\makeindex % Generate the index which is printed at the end of the document
+
+%----------------------------------------------------------------------------------------
+%	PANDOC CSL REFERENCES ENVIRONMENTS
+%----------------------------------------------------------------------------------------
+
+$if(csl-refs)$
+    \newlength{\cslhangindent}
+    \setlength{\cslhangindent}{1.5em}
+    \newlength{\csllabelwidth}
+    \setlength{\csllabelwidth}{2em}
+
+    % {{-- Pandoc <= 2.10 csl references env.
+    \newenvironment{cslreferences}%
+    {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+    \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+    {\par}
+    % }}--
+
+    % {{-- Pandoc >= 2.11 csl references env.
+
+    \newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+    {% don't indent paragraphs
+      \setlength{\parindent}{0pt}
+      % turn on hanging indent if param 1 is 1
+      \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+      % set entry spacing
+      \ifnum #2 > 0
+      \setlength{\parskip}{#2\baselineskip}
+      \fi
+    }%
+    {}
+    \usepackage{calc} % for \widthof, \maxof
+    \newcommand{\CSLBlock}[1]{#1\hfill\break}
+    \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\maxof{\widthof{#1}}{\csllabelwidth}}{#1}}
+    \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth-\cslhangindent-\csllabelwidth}{#1}}
+    \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+    % }}--
+$endif$
+
+%----------------------------------------------------------------------------------------
+%	BOOK META-INFORMATION
+%----------------------------------------------------------------------------------------
+
+% Title of book.
+
+$if(title)$
+\title{$title$}
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+$endif$
+
+% Authorship.
+
+$if(author)$
+\author{$for(author)$$it.first$ $it.last$$sep$\linebreak $endfor$} % Author
+$endif$
+
+% Publisher
+
+$if(publisher)$
+\publisher{$publisher.name$}
+$endif$
+
+%----------------------------------------------------------------------------------------
+%	TITLEPAGE
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\pagenumbering{Roman} % Number the title page differently than the rest of the text.
+\maketitle
+\frontmatter
+
+%----------------------------------------------------------------------------------------
+%	EPIGRAPH
+%----------------------------------------------------------------------------------------
+
+$if(epigraph)$
+\thispagestyle{empty}
+$for(epigraph)$
+\openepigraph{$it.quote$}{\hfill{\itshape $it.author$}}
+\vfill
+$endfor$
+$endif$
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+$if(copyright)$
+$if(copyright-own-page)$
+\newpage
+$endif$
+\begin{fullwidth}
+~\vfill
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+Copyright \copyright\ \the\year\ \thanklessauthor
+
+$if(publisher)$
+\par\smallcaps{Published by \thanklesspublisher}$if(publisher.location)$ \small{$publisher.location$.}$endif$
+
+\par\smallcaps{\url{$publisher.website$}}
+$endif$
+
+$if(license)$
+\par $license$$if(license-in-index)$\index{license}$endif$
+$endif$
+
+$if(edition)$
+\par\textit{$edition$, \monthyear}
+$endif$
+\end{fullwidth}
+$endif$
+
+%----------------------------------------------------------------------------------------
+%	LISTS OF THINGS
+%----------------------------------------------------------------------------------------
+
+$if(toc)$
+\tableofcontents
+$endif$
+
+$if(lof)$
+\listoffigures % Print a list of figures
+$endif$
+
+$if(lot)$
+\listoftables % Print a list of tables
+$endif$
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION PAGE
+%----------------------------------------------------------------------------------------
+
+$if(dedication)$
+\cleardoublepage
+~\vfill
+\begin{doublespace}
+\noindent\fontsize{18}{22}\selectfont\itshape
+\nohyphenation
+$dedication$
+\end{doublespace}
+\vfill
+\vfill
+$endif$
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+\mainmatter
+
+$body$
+
+%----------------------------------------------------------------------------------------
+%	RECIPES
+%----------------------------------------------------------------------------------------
+
+
+$for(chapters)$
+\chapter{$chapters.name$}\label{$chapters.name$}
+$for(chapters.recipes)$
+\setcounter{footnote}{0}
+\section{$it.name$}
+
+$if(it.times)$
+\begin{margintable}
+    \vspace{12pt plus 2pt minus 2pt}
+    \begin{tabular}{l l}
+        \toprule
+        $for(it.times)$$it.name$ & $if(it.hh)$$it.hh$ hr.$endif$ $if(it.mm)$$it.mm$ min.$endif$ $if(it.ss)$$it.ss$ sec.$endif$ \\ $endfor$
+        \bottomrule
+    \end{tabular}
+    \vspace{12pt plus 2pt minus 2pt}
+\end{margintable}
+$endif$
+
+$if(it.notes)$
+\marginnote{\textbf{Notes:} $it.notes$}
+$endif$
+\newthought{$it.type/lowercase$}$if(it.categories)$: $for(it.categories)$$it$\index{$it$}$sep$, $endfor$.$endif$
+\index{$it.type/lowercase$}
+
+$if(it.source)$
+\vspace{-12pt plus 2pt minus 2pt}
+\newthought{source}:
+$if(it.source.other)$
+$it.source.other$.
+$endif$
+$if(it.source.url)$
+\newline
+\href{$it.source.url$}{$it.source.url$}.
+$elseif(it.source.book)$
+\textit{$it.source.book.title$}, $if(it.source.book.author)$$for(it.source.book.author)$$it.first$ $it.last$$sep$, $endfor$, $endif$$if(it.source.book.edition)$$it.source.book.edition$$endif$$if(it.source.book.year)$ ($it.source.book.year$)$endif$.
+$else$
+$endif$
+$endif$
+
+$if(it.yields)$
+\vspace{-12pt plus 2pt minus 2pt}
+\newthought{yields}: $it.yields.amount$ $it.yields.unit$.
+$endif$
+
+$if(it.cookware)$
+\vspace{-12pt plus 2pt minus 2pt}
+\newthought{cookware}: $for(it.cookware)$$it/lowercase$$sep$, $endfor$.
+$endif$
+
+$if(it.ingredients)$
+\subsection*{Ingredients}
+\begin{itemize}
+$for(it.ingredients)$
+  \item{%
+    $it.name$$if(it.amount)$ ($it.amount$$if(it.unit)$ $it.unit$$endif$)$endif$$if(it.processing)$---$it.processing$$endif$$if(it.notes)$\,\sidenote[][]{$it.notes$}$endif$
+    $if(it.substitutions)$
+    \newline {\itshape Substitutions}$if(it.substitutions.hint)$ ($it.substitutions.hint$)$endif$:
+      \vspace{-6pt plus 2pt minus 2pt}
+      \begin{itemize}
+      $for(it.substitutions.list)$
+        \item {$it.name$$if(it.amount)$ ($it.amount$$if(it.unit)$ $it.unit$$endif$)$endif$$if(it.processing)$---$it.processing$$endif$$if(it.notes)$\,\sidenote[][]{$it.notes$}$endif$}
+      $endfor$
+      \end{itemize}
+    $endif$
+  }
+$endfor$
+\end{itemize}
+$endif$
+
+$if(it.prep)$
+\subsection*{Preparation}
+\begin{enumerate}
+$for(it.prep)$
+ \item{$it.step$$if(it.notes)$\sidenote{$it.notes$}$endif$}
+$endfor$
+\end{enumerate}
+$endif$
+
+$if(it.method)$
+\subsection*{Method}
+\begin{enumerate}
+$for(it.method)$
+ \item{$it.step$$if(it.notes)$\sidenote{$it.notes$}$endif$}
+$endfor$
+\end{enumerate}
+$endif$
+$if(rule-between-entries)$
+$if(it.nohrule)$
+$else$
+\vfill
+\vfill
+\hrule
+$endif$
+$endif$
+$if(break-between-entries)$
+\newpage
+$endif$
+$endfor$ $-- recipes
+$endfor$ $-- chapters
+
+
+%----------------------------------------------------------------------------------------
+%	BACKMATTER
+%----------------------------------------------------------------------------------------
+
+\backmatter
+
+\nobibliography{}
+\bibliography{}
+
+% Print the index at the very end of the document
+\printindex
+
+%----------------------------------------------------------------------------------------
+\end{document}

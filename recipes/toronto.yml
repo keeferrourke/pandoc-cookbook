@@ -1,0 +1,51 @@
+toronto: &toronto
+  name: Toronto
+  type: cocktail
+  categories:
+    - whisky
+    - fernet
+    - classic
+    - dark
+  source:
+    book:
+      title: Cocktail Bill Boothby's World Drinks and How to Mix Them
+      year: 1930
+  yields:
+    amount: 1
+    unit: drink
+  ingredients:
+    - name: Rye whisky
+      amount: 2
+      unit: oz
+    - name: Fernet-Branca
+      amount: \sfrac{1}{4}
+      unit: oz
+      notes: >
+        Fernet is a style of _amaro_ bitter orginating from Italy.
+        It is flowery, medicinal, and has a bold peppermint flavour.
+    - name: Simple syrup
+      amount: \sfrac{1}{4}
+      unit: oz
+      substitutions:
+        list:
+          - name: Orange liqueur (any)
+            notes: Rather than using simple syrup, I enjoy Triple Sec, for a less sweet/syrup-y mouthfeel, and fruitier orange notes.
+    - name: Angostura bitters
+      amount: 2
+      unit: dash
+    - name: Orange peel
+    - name: Ice
+      processing: cracked; large cubes
+  method:
+    - step: In a cocktail shaker, combine rye, Fernet-Branca, syrup, and bitters.
+    - step: Stir with ice for 20 seconds (don't shake).
+    - step: >
+        Strain into a whisky tumbler with large ice cubes.
+        Alternatively, serve in a chilled coup glass with no ice.
+    - step: Squeeze and twist an orange peel over the glass and drop as a garnish.
+  notes: |
+    A dry, mildly bitter variation on the _Old Fashioned_, distinguished by the addition of Fernet-Branca.
+    Sugar cuts the somewhat medicinal profile of the Fernet-Branca, and the rye whisky complements its bitterness for a sophistated overall drink.
+
+
+
