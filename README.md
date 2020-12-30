@@ -37,6 +37,16 @@ The recipe format is loosely based on the [Open Recipe Format](https://open-reci
 	   ss: 15          # seconds (optional)
    ```
 
+ - A new `oven` block is introduced, which can identify whether a convection fan is used, what the
+ starting temperature should be, and optionally what unit the oven temp is described by.
+
+   ```yml
+   oven:
+     fan: on  # on, off, or false to omit rendering
+     temp: 375
+     degrees: F # Assumed to F (Fahrenheit) if omitted, but can be overridden.
+   ```
+
  - The `ingredient` dict structure is slightly simplified.
    Substitutions are represented differently.
    A full example follows.

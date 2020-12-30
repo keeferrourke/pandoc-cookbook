@@ -1,0 +1,97 @@
+sake-bag-bass: &sake-bag-bass
+  name: Bagged sake bass
+  type: main
+  categories:
+    - fish
+    - Asian
+    - sake
+  yield:
+    amount: 2
+    unit: servings
+  cookware:
+    - baking tray
+    - small frying pan
+    - parchment or aluminum foil
+  times:
+    - name: Preparation
+      mm: 10
+    - name: Bake
+      mm: 20
+  oven:
+    temp: 400
+  ingredients:
+    - name: Bass
+      amount: 2
+      unit: fillet
+      processing: 2--2 \sfrac{1}{2} cm thick, skinned and boned
+      substitutions:
+        hint: pick one
+        list:
+          - name: Cod fillet
+          - name: White fish
+    - name: Sake
+      amount: 2
+      unit: splash
+    - name: Garlic
+      amount: 2
+      unit: clove
+      processing: smashed
+    - name: Ginger
+      amount: 1
+      unit: tbsp.
+      processing: minced
+    - name: Green onion
+      amount: 1
+      unit: ea.
+      processing: thinly sliced
+    - name: Sesame oil
+      amount: 1
+      unit: tsp.
+    - name: Soy sauce
+      amount: 1
+      unit: tsp.
+    - name: Fresh red chili pepper
+      amount: 1
+      unit: ea.
+      processing: sliced
+      notes: Optional.
+    - name: Black seasame seeds
+      amount: 1
+      unit: tsp.
+      processing: toasted
+    - name: Baby bok choy
+      notes: Optional.
+      substitutions:
+        list:
+          - name: Mustard greens
+  prep:
+    - step: Tear two 35 cm $\times$ 45 cm pieces of foil and place a fillet in the center of each.
+      notes: Parchment paper is traditionally used for this method of cooking, but it is significantly more difficult to work with.
+    - step: Coat each fillet with \sfrac{1}{2} tsp. sesame oil.
+    - step: >
+        Mince ginger and smash the garlic cloves.
+        Slice the scallions thinly.
+    - step:
+        Add a smashed garlic clove, half the ginger and half the green onions to each foil boat.
+      notes: If planning to serve in parchment, considering adding a green vegetable like baby bok choy or mustard greens to the pouch.
+    - step: Fold three sides of the foil up like an envelope, crimping the edges to create a seal.
+    - step: Through the open side of the envelope, add a splash of sake with half the soy sauce to each boat.
+    - step: >
+        Fold up the remaining side of the foil and crimp to form a tightly sealed foil pocket.
+        Carefully transfer to a baking tray.
+
+  method:
+    - step: Heat the oven to 400\textdegree F.
+    - step: Meanwhile, heat a small pan over medium heat and toast the seasame seeds for 1--2 minutes.
+    - step: Bake the fish for 15--20 minutes, until the fish is opaque and cooked through.
+    - step: Serve directly in the foil, or pierce the bag to release the steam and carefully transfer to a plate.
+      notes: >
+        Foil isn't the prettiest to serve, but parchment can look nice on a plate when sliced open with a sharp knife.
+        Slicing the pouch at the table will allow guests to enjoy the aromas as they are released.
+    - step: Sprinkle with black seasame seeds as a garnish.
+  notes: |
+    This steamed bass is infused with umami flavours and cooked with the French _en papillote_ technique.
+    Quite simply, cooking the fish in a bag allows you to seal in the flavours while steaming the fish.
+
+    Serve this over or alongside a bed of steamed jasmine or black rice, or with roasted sweet potato or carrots.
+

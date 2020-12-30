@@ -9,6 +9,7 @@ chapters:
    recipes:
      - *african-peanut-stew
      - *okonomiyaki
+     - *sake-bag-bass
  - name: Drinks
    recipes:
      # You might not want an hrule at the end of some recipes.

@@ -30,7 +30,9 @@ $if(colorlinks)$
 \hypersetup{colorlinks}
 $endif$
 
+\usepackage[font={footnotesize,bf},format=plain,justification=justified,singlelinecheck=false]{caption}
 \usepackage{longtable}
+\usepackage{tabularx}
 \usepackage{xfrac} % Allows slanted fractions
 \usepackage{microtype} % Improves character and word spacing
 \usepackage{booktabs} % Better horizontal rules in tables
@@ -268,11 +270,37 @@ $for(chapters.recipes)$
 $if(it.times)$
 \begin{margintable}
     \vspace{12pt plus 2pt minus 2pt}
-    \begin{tabular}{l l}
+    \caption*{Times}
+    \hspace{-2ex}
+    \begin{tabularx}{\marginparwidth}{@{}X X}
         \toprule
         $for(it.times)$$it.name$ & $if(it.hh)$$it.hh$ hr.$endif$ $if(it.mm)$$it.mm$ min.$endif$ $if(it.ss)$$it.ss$ sec.$endif$ \\ $endfor$
         \bottomrule
-    \end{tabular}
+    \end{tabularx}
+    $if(it.oven)$
+    $else$
+    \vspace{12pt plus 2pt minus 2pt}
+    $endif$
+\end{margintable}
+$endif$
+$if(it.oven)$
+\begin{margintable}
+    $if(it.times)$
+    $else$
+    \vspace{12pt plus 2pt minus 2pt}
+    $endif$
+    \caption*{Oven settings}
+    \hspace{-2ex}
+    \begin{tabularx}{\marginparwidth}{@{}X X}
+        \toprule
+        $if(it.oven.fan/pairs)$
+        Convection fan & $it.oven.fan$ \\
+        $endif$
+        $if(it.oven.temp)$
+        Starting temp. & $it.oven.temp$\textdegree $if(it.oven.degrees)$$it.oven.degrees$$else$F$endif$ \\
+        $endif$
+        \bottomrule
+    \end{tabularx}
     \vspace{12pt plus 2pt minus 2pt}
 \end{margintable}
 $endif$
