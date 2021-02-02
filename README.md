@@ -115,7 +115,7 @@ To use this template, you'll need:
  - GNU Make
  - TeXLive with `pdflatex` and `latexmk` (xelatex is not currently supported).
  - Pandoc v2.11 or higher.
- - `yaml2json` (get it with `npm install -g yaml2json`).
+ - `yaml2json` (get it with `npm install -g yamljs`).
 
 ## License
 
