@@ -353,13 +353,13 @@ $if(it.ingredients)$
 \begin{itemize}
 $for(it.ingredients)$
   \item{%
-    $it.name$$if(it.amount)$ ($it.amount$$if(it.unit)$ $it.unit$$endif$)$endif$$if(it.processing)$---$it.processing$$endif$$if(it.notes)$\,\sidenote[][]{$it.notes$}$endif$
+  $it.name$$if(it.amount)$ ($it.amount$$if(it.unit)$ $it.unit$$endif$)$elseif(it.amounts)$ ($for(it.amounts)$$it.amount$$if(it.unit)$ $it.unit$$endif$$sep$, $endfor$)$endif$$if(it.processing)$---$it.processing$$endif$$if(it.notes)$\,\sidenote[][]{$it.notes$}$endif$
     $if(it.substitutions)$
     \newline {\itshape Substitutions}$if(it.substitutions.hint)$ ($it.substitutions.hint$)$endif$:
       \vspace{-6pt plus 2pt minus 2pt}
       \begin{itemize}
       $for(it.substitutions.list)$
-        \item {$it.name$$if(it.amount)$ ($it.amount$$if(it.unit)$ $it.unit$$endif$)$endif$$if(it.processing)$---$it.processing$$endif$$if(it.notes)$\,\sidenote[][]{$it.notes$}$endif$}
+        \item {$it.name$$if(it.amount)$ ($it.amount$$if(it.unit)$ $it.unit$$endif$)$elseif(it.amounts)$ ($for(it.amounts)$$it.amount$$if(it.unit)$ $it.unit$$endif$$sep$, $endfor$)$endif$$if(it.processing)$---$it.processing$$endif$$if(it.notes)$\,\sidenote[][]{$it.notes$}$endif$}
       $endfor$
       \end{itemize}
     $endif$
