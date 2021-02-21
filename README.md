@@ -65,6 +65,19 @@ The recipe format is loosely based on the [Open Recipe Format](https://open-reci
            - name: Turnip
            - name: Onion
    ```
+ - Specifying the `amount`.
+   Sometimes a recipe needs a mix of amounts, (ie. 1 cup, 2 tps.) so there is an
+   optional `amounts` dict that can be used instead of `amount`.
+
+   ```yml
+   ingredients:
+     - name: Flour
+       amounts:
+        - amount: 1
+          unit: cup.
+        - amount: 2
+          unit: tsp.
+   ```
 
  - The `steps` list is split into `prep` and `method` lists.
    Hazard control points are not currently supported.
