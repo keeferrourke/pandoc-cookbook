@@ -154,7 +154,7 @@ $endif$
 % Authorship.
 
 $if(author)$
-\author{$for(author)$$it.first$ $it.last$$sep$\linebreak $endfor$} % Author
+\author{$for(author)$$it.first$ $it.last$$sep$, $endfor$} % Author
 $endif$
 
 % Publisher
