@@ -1,13 +1,13 @@
 SHELL = /bin/bash
 
 .SUFFIXES:
-.SUFFIXES: .md .yml .jpg .png .svg .pdf
+.SUFFIXES: .md .yml .jpg .png .svg .pdf .yaml
 
 OUTPUT_DIR = out
 DOCNAME = 'recipes.pdf'
 METADATA = metadata.yml
 LAYOUT = layout.yml
-RECIPES = $(wildcard recipes/*.yml)
+RECIPES = $(wildcard recipes/*.yml) $(wildcard recipes/*.yaml)
 BODY = body.md
 SRC_FILES = $(METADATA) $(RECIPES) $(LAYOUT)
 
