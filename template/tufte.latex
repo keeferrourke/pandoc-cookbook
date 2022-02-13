@@ -101,7 +101,7 @@ $endif$
 \makeindex % Generate the index which is printed at the end of the document
 
 %----------------------------------------------------------------------------------------
-%	PANDOC CSL REFERENCES ENVIRONMENTS
+%	PANDOC-SPECIFIC ENVIRONMENTS AND COMMANDS
 %----------------------------------------------------------------------------------------
 
 $if(csl-refs)$
@@ -138,6 +138,9 @@ $if(csl-refs)$
     % }}--
 $endif$
 
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 %----------------------------------------------------------------------------------------
 %	BOOK META-INFORMATION
 %----------------------------------------------------------------------------------------
@@ -164,7 +167,7 @@ $if(publisher)$
 $endif$
 
 %----------------------------------------------------------------------------------------
-%	TITLEPAGE
+%	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -267,6 +270,24 @@ $for(chapters.recipes)$
 \setcounter{footnote}{0}
 \section{$it.name$}
 
+$if(it.source)$
+\vspace{-12pt plus 2pt minus 2pt}
+\begin{fullwidth}
+\newthought{source}:
+$if(it.source.other)$
+$it.source.other$.
+$endif$
+$if(it.source.url)$
+\newline
+\href{$it.source.url$}{$it.source.url$}.
+$elseif(it.source.book)$
+\textit{$it.source.book.title$}, $if(it.source.book.author)$$for(it.source.book.author)$$it.first$ $it.last$$sep$, $endfor$, $endif$$if(it.source.book.edition)$$it.source.book.edition$$endif$$if(it.source.book.year)$ ($it.source.book.year$)$endif$.
+$else$
+$endif$
+\end{fullwidth}
+\vspace{24 pt plus 2pt minus 2pt}
+$endif$
+
 $if(it.times)$
 \begin{margintable}
     \vspace{12pt plus 2pt minus 2pt}
@@ -308,23 +329,14 @@ $endif$
 $if(it.notes)$
 \marginnote{\textbf{Notes:} $it.notes$}
 $endif$
-\newthought{$it.type/lowercase$}$if(it.categories)$: $for(it.categories)$$it$\index{$it$}$sep$, $endfor$.$endif$
-\index{$it.type/lowercase$}
 
 $if(it.source)$
-\vspace{-12pt plus 2pt minus 2pt}
-\newthought{source}:
-$if(it.source.other)$
-$it.source.other$.
-$endif$
-$if(it.source.url)$
-\newline
-\href{$it.source.url$}{$it.source.url$}.
-$elseif(it.source.book)$
-\textit{$it.source.book.title$}, $if(it.source.book.author)$$for(it.source.book.author)$$it.first$ $it.last$$sep$, $endfor$, $endif$$if(it.source.book.edition)$$it.source.book.edition$$endif$$if(it.source.book.year)$ ($it.source.book.year$)$endif$.
+\vspace{-24pt plus 2pt minus 2pt}
 $else$
+\vspace{-12pt plus 2pt minus 2pt}
 $endif$
-$endif$
+\newthought{$it.type/lowercase$}$if(it.categories)$: $for(it.categories)$$it$\index{$it$}$sep$, $endfor$.$endif$
+\index{$it.type/lowercase$}
 
 $if(it.yields)$
 \vspace{-12pt plus 2pt minus 2pt}
