@@ -33,7 +33,7 @@ $(OUTPUT_DIR)/build.json: yaml
 	@yaml2json -i2 -p -s $(OUTPUT_DIR)/build.yml 2>&1 1>/dev/null
 
 yaml: $(SRC_FILES) $(OUTPUT_DIR)
-	@cat $(SRC_FILES) > $(OUTPUT_DIR)/build.yml
+	@awk 'FNR==1{print ""}1' $(SRC_FILES) > $(OUTPUT_DIR)/build.yml
 
 $(OUTPUT_DIR):
 	-@mkdir $(OUTPUT_DIR)
@@ -43,4 +43,3 @@ clean:
 
 print-%:
 	@echo $* = \"$($*)\"
-
