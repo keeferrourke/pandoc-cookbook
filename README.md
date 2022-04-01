@@ -103,11 +103,6 @@ The included Makefile will:
 
 A full example of a recipe book is included in the `example` directory of this repository.
 
-## TODO
-
- - Support title page images
- - Support recipe images (full-page bleed or otherwise)
-
 ## Dependencies
 
 To use this template, you'll need:
